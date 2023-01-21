@@ -1,0 +1,207 @@
+@font-face {
+	font-family: monument;
+	src: url("../../fonts/Monument Extended Regular 400.otf") format("opentype");
+}
+
+@font-face {
+	font-family: monument extended;
+	src: url("../../fonts/Monument Extended Ultrabold 800.otf") format("opentype");
+}
+
+body {
+	background-color: #0a0a0c;
+	overflow-y: hidden;
+}
+
+ul {
+	display: inline-block;
+	list-style: none;
+}
+
+li {
+	display: inline;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:link {
+	color: #000000;
+}
+
+a:visited {
+	color: #000000;
+}
+
+a:hover {
+	color: #d92040;
+}
+
+/* nav positions */
+#menu {
+	position: fixed;
+	overflow: hidden;
+
+	animation: opacityy 1s ease-out;
+}
+
+#menu a {
+	text-align: center;
+	text-decoration: none;
+}
+
+#menu .left {
+	float: left;
+}
+
+#menu .right {
+	float: right;
+}
+
+/* nav left; back icon */
+.back {
+	width: 32px;
+	height: 32px;
+	opacity: 0.3;
+
+	left: 20px;
+	padding-top: 20px;
+	position: absolute;	
+}
+
+.back:hover {
+	opacity: 1;
+}
+
+.back:before, .back:after {
+	width: 2px;
+	height: 25px;
+	content: ' ';
+	background-color: #fbf7f3;
+
+	position: absolute;
+	left: 15px;
+}
+
+.back:before {
+	transform: rotate(45deg);
+}
+
+.back:after {
+	transform: rotate(-45deg);
+}
+
+/* nav right; logo */
+.logo {
+	width: 6%;
+	height: 6%;
+	
+	padding-top: 20px;
+	padding-right: 20px;
+
+	margin-left: auto;
+	display: block;
+}
+
+/* bg text */
+#bgText {
+	font-family: monument extended;
+	font-size: 1100%;
+	font-weight: bold;
+	-webkit-text-stroke: 1px #fbf7f3;
+	color: transparent;
+
+	position: fixed;
+	display: block;
+	margin: 0;
+	top: 50%;
+
+	transform: translate(7%, -60%);
+}
+
+#bgText .one {
+	animation: topTobottom 0.5s ease-out;
+}
+
+#bgText .two {
+	color: #d92040;
+	-webkit-text-stroke: 1px #d92040;
+
+	animation: topTobottom 0.75s ease-out;
+}
+
+#bgText .three {
+	animation: topTobottom 1s ease-out;
+}
+
+#images {
+	position: absolute;
+	left: 0;
+	bottom: 35px;
+	width: 100%;
+	z-index: 100;
+
+}
+
+.hori {
+	overflow-x: scroll;
+  	overflow-y: hidden;
+  	white-space: nowrap;
+	
+	list-style: none;
+	margin-bottom: 0;
+
+	animation: rightToleft 1s ease-out;
+}
+
+::-webkit-scrollbar {
+    display: none;
+ }
+
+.hori .image {
+
+	margin-left: 50px;
+	cursor: pointer;
+	display: inline-block;
+
+	
+}
+
+.image img {
+	width: 300px;
+	height: 400px;
+}
+
+.image .desc {
+	padding: 0px;
+	text-align: left;
+
+	animation: opacityy 1s ease-out;
+}
+
+.image .desc h1 {
+	font-family: monument;
+	color: #d92040;
+}
+
+.image .desc p {
+	font-family: century gothic;
+	color: #fbf7f3;
+}
+
+/* animations */
+@keyframes opacityy {
+	from	{opacity: 0;}
+	to		{opacity: 1;}
+}
+
+@keyframes topTobottom {
+	from	{opacity: 0; margin: -50%;}
+	to		{opacity: 1; margin: 0;}
+}
+
+@keyframes rightToleft {
+	from	{opacity: 0; margin-left: 20%;}
+	to		{opacity: 1; margin-left: 0px;}
+}

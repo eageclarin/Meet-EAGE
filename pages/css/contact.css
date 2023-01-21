@@ -1,0 +1,220 @@
+@font-face {
+	font-family: monument;
+	src: url("../../fonts/Monument Extended Regular 400.otf") format("opentype");
+}
+
+@font-face {
+	font-family: monument extended;
+	src: url("../../fonts/Monument Extended Ultrabold 800.otf") format("opentype");
+}
+
+body {
+	background-color: #fbf7f3;
+	overflow: hidden;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:link {
+	color: #d92040;
+}
+
+a:visited {
+	color: #d92040;
+}
+
+a:hover {
+	color: #000000;
+}
+
+/* nav positions */
+#menu {
+	position: relative;
+	overflow: hidden;
+
+	animation: opacityy 1s ease-out;
+}
+
+#menu a {
+	text-align: center;
+	text-decoration: none;
+}
+
+#menu .left {
+	float: left;
+}
+
+#menu .right {
+	float: right;
+}
+
+/* nav left; back icon */
+.back {
+	width: 32px;
+	height: 32px;
+	opacity: 0.3;
+
+	left: 20px;
+	padding-top: 20px;
+	position: absolute;	
+}
+
+.back:hover {
+	opacity: 1;
+}
+
+.back:before, .back:after {
+	width: 2px;
+	height: 25px;
+	content: ' ';
+	background-color: #000000;
+
+	position: absolute;
+	left: 15px;
+}
+
+.back:before {
+	transform: rotate(45deg);
+}
+
+.back:after {
+	transform: rotate(-45deg);
+}
+
+/* nav right; logo */
+.logo {
+	width: 6%;
+	height: 6%;
+	
+	padding-top: 20px;
+	padding-right: 20px;
+
+	margin-left: auto;
+	display: block;
+}
+
+/* body */
+#body {
+	position: relative;
+}
+
+/* body image */
+#body .img {
+	width: 40%;
+
+	float: left;
+	margin-left: -10%;
+	margin-top: 3%;
+
+}
+
+/* body texts */
+#body .texts {
+	margin-top: 20%;
+	position: absolute;
+}
+
+/* contact who */
+#body .texts .contact {
+	font-family: monument extended;
+		color: #d92040;
+	font-size: 150px;
+
+	margin-left: 150%;
+}
+
+.texts .contact .name {
+	margin-top: -20px;
+}
+
+/* hi alex not filled */
+.first {
+	-webkit-text-stroke: 2px #d92040;
+	color: transparent;
+
+	margin-top: -200px;
+	z-index: -100;
+
+	animation: bottomTotop 0.7s ease-out;
+}
+
+.second {
+	margin-top: -20px;
+
+	animation: bottomTotopp 1s ease-out;
+}
+
+/* social medias */
+.texts .socmed {
+	font-family: monument;
+	font-size: 20px;
+
+	text-align: right;
+	margin-right: 22%;
+	margin-top: -100%;
+}
+
+/* instagram */
+.texts .socmed .siteI {
+	margin-top: 20px;
+}
+
+/* twitter */
+.texts .socmed .siteT {
+	margin-top: 20px;
+}
+
+/* button contact */
+.texts .socmed .siteE {
+	margin-top: 80px;
+}
+
+button {
+	font-family: monument;
+	color: #fbf7f3;
+	font-size: 15px;
+
+	border-radius: 4px;
+	background-color: #d92040;
+	border: none;
+	
+	text-align: center;
+	padding: 10px;
+	width: 110px;
+
+	transition: all 0.5s;
+	cursor: pointer;
+	margin: 3px;
+}
+
+button:hover {
+	background-color: #000000;
+}
+
+/* animations */
+@keyframes opacityy {
+	from	{opacity: 0;}
+	to		{opacity: 1;}
+}
+
+@keyframes bottomTotop {
+	from 	{opacity: 0; margin-top: 100px}
+	to 		{opacity: 1; margin-top: -200px}
+}
+
+@keyframes bottomTotopp {
+	from 	{opacity: 0; margin-top: 100px}
+	to 		{opacity: 1; margin-top: -20px}
+}
+
+@keyframes leftToright {
+	from	{opacity: 0; margin-left: -50%;}
+	to		{opacity: 0.1; margin-left: -10%;}
+}
+
+@keyframes leftTorightt {
+	from	{opacity: 0; margin-left: -50%;}
+	to		{opacity: 1; margin-left: 0;}
+}

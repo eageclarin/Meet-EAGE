@@ -1,0 +1,136 @@
+@font-face {
+	font-family: monument;
+	src: url("../../fonts/Monument Extended Regular 400.otf") format("opentype");
+}
+
+@font-face {
+	font-family: monument extended;
+	src: url("../../fonts/Monument Extended Ultrabold 800.otf") format("opentype");
+}
+
+body {
+	background-color: #0a0a0c;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:link {
+	color: #fbf7f3;
+}
+
+a:visited {
+	color: #fbf7f3;
+}
+
+a:hover {
+	color: #d92040;
+}
+
+#page {
+	width: 650px;
+	margin: 0;
+}
+
+/* images */
+.images {
+	top: 0;
+	
+	float: left;
+	overflow: auto;
+
+	animation: topTobottom 1.2s ease-out;
+}
+
+.images img {
+	width: 650px;
+	height: 650px;
+
+	margin-top: -5px;
+}
+
+/* text */
+/* title */
+.title {
+	font-family: monument extended;
+	color: #fbf7f3;
+	font-size: 1300%;
+
+	position: fixed;
+	transform: rotate(90deg) translate(25%,-135px);
+
+	animation: bottomTotop 1s ease-out;
+}
+
+/* info */
+.info {
+	font-family: monument;
+	color: #fbf7f3;
+	width: 37%;
+
+	position: fixed;
+	right: 50px;
+	
+	animation: leftToright 1s ease-out;
+	/*transform: translate(400%, 50%);*/
+}
+
+.info h1 {
+	color: #fbf7f3;
+	font-size: 60px;
+}
+
+.info sup {
+	color:  #d92040;
+	font-size: 20px;
+}
+
+.info a {
+	font-size: 20px;
+}
+
+/* next previous exit */
+.info .one {
+	animation: changeColor 1s ease-out;
+}
+
+.info .two {
+	animation: changeColor 1.2s ease-out;
+}
+
+.info .three {
+	animation: changeColor 1.4s ease-out;
+}
+
+/* details */
+.info .deets {
+	text-align: justified
+	font-size: 11px;
+	font-family: century gothic;
+}
+
+/* animation */
+@keyframes topTobottom {
+	from 	{opacity: 0; margin-top: -50px;}
+	to 		{opacity: 1; margin-top: 0;}
+}
+
+@keyframes bottomTotop {
+	from 	{opacity: 0; transform: rotate(90deg) translate(55%, -135px);}
+	to 		{opacity: 1; transform: rotate(90deg) translate(25%, -135px);}
+}
+
+@keyframes changeColor {
+	from 	{opacity: 0; color: #d92040;}
+	to 		{opacity: 1; color: #fbf7f3;}
+}
+
+@keyframes leftToright {
+	from 	{opacity: 0; right: 80px;}
+	to 		{opacity: 1; right: 50px;}
+}

@@ -1,0 +1,172 @@
+@font-face {
+	font-family: monument;
+	src: url("../../fonts/Monument Extended Regular 400.otf") format("opentype");
+}
+
+@font-face {
+	font-family: monument extended;
+	src: url("../../fonts/Monument Extended Ultrabold 800.otf") format("opentype");
+}
+
+body {
+	background-color: #fbf7f3;
+	overflow: hidden;
+}
+
+
+/* nav positions */
+#menu {
+	position: fixed;
+	overflow: hidden;
+
+	animation: opacityy 1s ease-out;
+}
+
+#menu a {
+	text-align: center;
+	text-decoration: none;
+}
+
+#menu .left {
+	float: left;
+}
+
+#menu .right {
+	float: right;
+}
+
+/* nav left; logo */
+.logo {
+	width: 6%;
+	height: 6%;
+	
+	padding-top: 20px;
+	padding-left: 20px;
+
+	margin-right: auto;
+	display: block;
+}
+
+/* nav right; back icon */
+.back {
+	width: 32px;
+	height: 32px;
+	opacity: 0.3;
+
+	right: 20px;
+	padding-top: 20px;
+	position: absolute;	
+}
+
+.back:hover {
+	opacity: 1;
+}
+
+.back:before, .back:after {
+	width: 2px;
+	height: 25px;
+	content: ' ';
+	background-color: #000000;
+
+	position: absolute;
+	left: 15px;
+}
+
+.back:before {
+	transform: rotate(45deg);
+}
+
+.back:after {
+	transform: rotate(-45deg);
+}
+
+/* body */
+#body {
+	position: relative;
+}
+
+/* body iage */
+#body .img {
+	width: 40%;
+
+	float: right;
+	margin-right: 5%;
+	margin-top: 5%;
+
+	animation: bottomTotop 1s ease-out;
+}
+
+/* body texts */
+#body .texts {
+	margin-top: 20%;
+	left: 3%;
+	position: absolute;
+}
+
+/* big name */
+#body .texts .name {
+	font-family: monument extended;
+	color: #d92040;
+	font-size: 180px;
+}
+
+.texts .name .fName {
+	margin-top: -20px;
+
+	animation: opacityy 1s ease-out;
+}
+
+.texts .name .lName {
+	margin-top: -70px;
+	margin-left: 100px;
+
+	animation: rightToleft 1s ease-out;
+}
+
+/* about */
+/* short about */
+#body .abt {
+	font-family: monument;
+	color: #000000;
+	font-size: 23px;
+
+	margin-left: 20%;
+
+	animation: leftToright 1s ease-out;
+}
+
+/* long about */
+#body .about {
+	font-family: monument;
+	color: #000000;
+	font-size: 15px;
+
+	width: 40%;
+	text-align: right;
+
+	margin-top: -30px;
+	margin-left: 12%;
+
+	animation: opacityy 1.5s ease-out;
+}
+
+/* animations */
+@keyframes opacityy {
+	from	{opacity: 0;}
+	to		{opacity: 1;}
+}
+
+@keyframes rightToleft {
+	from	{opacity: 0; margin-left: 140px;}
+	to		{opacity: 1; margin-left: 100px;}
+}
+
+@keyframes leftToright {
+	from	{opacity: 0; margin-left: 16%;}
+	to		{opacity: 1; margin-left: 20%;}
+}
+
+@keyframes bottomTotop {
+	from	{opacity: 0; margin-top: 7%;}
+	to		{opacity: 1; margin-top: 5%;}
+}
